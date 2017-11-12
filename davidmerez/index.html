@@ -6,7 +6,7 @@
     <title>Petualangan David Merez</title>
 
     <!-- Load custom style sheet -->
-    <link rel="stylesheet" type="text/css" href="theme/love.css">
+    <link rel="stylesheet" type="text/css" href="theme/style.css">
   </head>
   <body>
     <center>
@@ -30,8 +30,8 @@
         loadingContext.fillStyle = "rgb( 11, 86, 117 )";
         loadingContext.fillText(text, canvas.scrollWidth / 2, canvas.scrollHeight / 2);
 
-        loadingContext.fillText(" ", canvas.scrollWidth / 2, canvas.scrollHeight / 4);
-        loadingContext.fillText(" ", canvas.scrollWidth / 2, canvas.scrollHeight / 4 * 3);
+        loadingContext.fillText("", canvas.scrollWidth / 2, canvas.scrollHeight / 4);
+        loadingContext.fillText("", canvas.scrollWidth / 2, canvas.scrollHeight / 4 * 3);
       }
 
       window.addEventListener("keydown", function(e) {
@@ -82,9 +82,6 @@
       };
     </script>
     <script type="text/javascript" src="game.js"></script>
-    <script async type="text/javascript" src="love.js"></script>
-    <footer>
-      <p></p>
-    </footer>
+    <script async type="text/javascript" src="core.js"></script>
   </body>
 </html>

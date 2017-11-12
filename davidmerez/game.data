@@ -192,6 +192,7 @@ function love.update (dt)
 		is_game_over = false
 		is_fall = false
 		SetImagePos(birdfly, 60, 170)
+		pipe_score = 1
 		
 		-- moving ground
 		if ground1.x+ground1.w <= 0 then
@@ -494,7 +495,7 @@ end
 function AnyKey ()
 	--return love.keyboard.isDown('space')
 	return love.keyboard.isDown('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-								'space','lctrl','rctrl','lshift','rshift','lalt','ralt','left','right','down','up',
+								'return','kpenter','space','lctrl','rctrl','lshift','rshift','lalt','ralt','left','right','down','up',
 								'1','2','3','4','5','6','7','8','9','0')
 	
 	
