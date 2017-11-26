@@ -194,6 +194,9 @@ function love.update (dt)
 		SetImagePos(birdfly, 60, 170)
 		pipe_score = 1
 		
+		bird_gravity = nil
+		bird_gravity = InitGravity(4, 1)
+		
 		-- moving ground
 		if ground1.x+ground1.w <= 0 then
 			ground1.x = 336 - fly_speed
@@ -207,9 +210,13 @@ function love.update (dt)
 			ground2.x = ground2.x - fly_speed
 		end
 		
-		if AnyKey() then
+		if AnyKey() and not oldmousedown then
+			Fly(birdfly, bird_gravity)
 			scene = '2.2'
 		end
+		--oldmousedown = love.keyboard.isDown("space")
+		oldmousedown = AnyKey()
+		
 	elseif scene == '2.2' then
 		debug_str = score
 		
